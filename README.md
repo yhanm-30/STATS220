@@ -1,7 +1,9 @@
 # My STATS 220 Repo
 
 This is my repo for my STATS 220 Assignment 1.
-The link to my repo is {[STATS220_Project] (https://github.com/yhanm-30/STATS220)}.
+
+The link to my repo is ([STATS220_Project] (https://github.com/yhanm-30/STATS220)).
+
 My repo will include the following:
 
 - Graphics created in R
