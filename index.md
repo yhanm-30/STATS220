@@ -22,7 +22,6 @@ I have created a meme about inflation and its impacts as it is a topical issue a
 ## The R code used to create my meme
 
 '''
-
     library(magick)
     intro_box <- image_read('inflation1.png') %>%
       image_resize('600x400')
@@ -52,6 +51,5 @@ I have created a meme about inflation and its impacts as it is a topical issue a
       image_scale(400)
     final_img <- c(top_row, second_row, third_row) %>%
       image_append(stack = TRUE)
-    image_write(final_img, 'meme.png')
-  
+    image_write(final_img, 'meme.png')  
 '''
