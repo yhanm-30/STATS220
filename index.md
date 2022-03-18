@@ -22,32 +22,32 @@ I have created a meme about inflation and its impacts as it is a topical issue a
 ## The R code used to create my meme
 
 'library(magick)
-intro_box <- image_read('inflation1.png') %>%
+  intro_box <- image_read('inflation1.png') %>%
   image_resize('600x400')
-inf_img1 <- image_read('inflation2.png') %>%
-  image_resize('715x600')
-blank1 <- image_blank(600, 400, 'light blue') %>%
-  image_annotate(text = 'inflation reduces the\n value of your money\n as prices rise',
+  inf_img1 <- image_read('inflation2.png') %>%
+    image_resize('715x600')
+  blank1 <- image_blank(600, 400, 'light blue') %>%
+    image_annotate(text = 'inflation reduces the\n value of your money\n as prices rise',
                  color = 'white',
                  size = 45,
                  font = 'Verdana',
                  gravity = 'center')
-inf_img2 <- image_read('inflation4.png') %>%
-  image_resize('600x400')
-blank2 <- image_blank(715, 400,'light blue') %>%
-  image_annotate(text = 'so you get less now\n for the same amount than\n you would have got\n in the past',
+  inf_img2 <- image_read('inflation4.png') %>%
+    image_resize('600x400')
+  blank2 <- image_blank(715, 400,'light blue') %>%
+    image_annotate(text = 'so you get less now\n for the same amount than\n you would have got\n in the past',
                  color = 'white',
                  size = 45,
                  font = 'Verdana',
                  gravity = 'center')
                  
 
-top_row <- image_append(intro_box) %>%
-  image_scale(400)
-second_row <- image_append(c(inf_img1, blank1)) %>%
-  image_scale(400)
-third_row <- image_append(c(blank2, inf_img2)) %>%
-  image_scale(400)
-final_img <- c(top_row, second_row, third_row) %>%
-  image_append(stack = TRUE)
-image_write(final_img, 'meme.png')'
+  top_row <- image_append(intro_box) %>%
+    image_scale(400)
+  second_row <- image_append(c(inf_img1, blank1)) %>%
+    image_scale(400)
+  third_row <- image_append(c(blank2, inf_img2)) %>%
+    image_scale(400)
+  final_img <- c(top_row, second_row, third_row) %>%
+    image_append(stack = TRUE)
+  image_write(final_img, 'meme.png')'
